@@ -515,7 +515,7 @@ position = Vector2(1202, 534)
 position = Vector2(248, 640)
 
 [node name="Collectable4" parent="Sceneobjects/collectables group" instance=ExtResource("5_u8lbt")]
-position = Vector2(477, 1090)
+position = Vector2(599, 1021)
 
 [node name="Collectable5" parent="Sceneobjects/collectables group" instance=ExtResource("5_u8lbt")]
 position = Vector2(2221, 1082)
