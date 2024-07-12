@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b54deint33yyf"]
+
+[ext_resource type="Texture2D" uid="uid://dl3jxc2d66em2" path="res://old_collectables/old_phone.png" id="1_l45yq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rsob3"]
+radius = 25.318
+
+[node name="Area2D2" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(28.5, 28.5)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("1_l45yq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(29.5, 29.5)
+shape = SubResource("CircleShape2D_rsob3")

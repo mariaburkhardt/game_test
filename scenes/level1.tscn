@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4y11kbitcfbj"]
+[gd_scene load_steps=14 format=3 uid="uid://b4y11kbitcfbj"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_e7d3u"]
 [ext_resource type="Texture2D" uid="uid://c445d26ppjck2" path="res://Green.png" id="2_2nu5b"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://c7btajttt8atr" path="res://scenes/finish.tscn" id="6_maopv"]
 [ext_resource type="PackedScene" uid="uid://cmj7rghg50csk" path="res://scenes/final_jogo.tscn" id="7_mbr2y"]
 [ext_resource type="FontFile" uid="uid://dvplok6uyxb67" path="res://font/Minecraft.ttf" id="7_woj2m"]
+[ext_resource type="PackedScene" uid="uid://djyiewq8knrny" path="res://scenes/colle_globe.tscn" id="9_0swsh"]
+[ext_resource type="Texture2D" uid="uid://dl3jxc2d66em2" path="res://old_collectables/old_phone.png" id="9_51lgh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xd0m"]
 texture = ExtResource("3_ouw4v")
@@ -481,10 +483,10 @@ script = ExtResource("1_e7d3u")
 
 [node name="TextureRect" type="TextureRect" parent="Sceneobjects"]
 texture_filter = 1
-offset_left = -19.0
-offset_top = -26.0
-offset_right = 2359.0
-offset_bottom = 647.0
+offset_left = -11.0
+offset_top = -8.0
+offset_right = 2367.0
+offset_bottom = 665.0
 texture = ExtResource("2_2nu5b")
 stretch_mode = 1
 
@@ -556,3 +558,33 @@ theme_override_font_sizes/font_size = 30
 text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
+texture_filter = 1
+texture = ExtResource("9_51lgh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+
+[node name="Area2D3" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+
+[node name="Area2D4" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+
+[node name="Area2D5" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+
+[node name="colle_globe" parent="." instance=ExtResource("9_0swsh")]
+texture_filter = 1
+position = Vector2(554, 460)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://djyiewq8knrny"]
+
+[ext_resource type="Script" path="res://scenes/colle_globe.gd" id="1_xkpvh"]
+[ext_resource type="Texture2D" uid="uid://cr1yo4euq0ppj" path="res://old_collectables/globe.png" id="2_bk6fx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g8xgv"]
+radius = 26.5707
+
+[node name="colle_globe" type="Area2D"]
+script = ExtResource("1_xkpvh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(40.5, 36.5)
+scale = Vector2(0.0780001, 0.0780001)
+texture = ExtResource("2_bk6fx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(40, 36)
+shape = SubResource("CircleShape2D_g8xgv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
